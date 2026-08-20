@@ -1,0 +1,10 @@
+# build artifacts (reproducible via scripts)
+build/
+dist/
+native-build/
+.kotlin/
+.DS_Store
+local.properties
+keystore.properties
+*.keystore
+*.jks
