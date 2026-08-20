@@ -1,0 +1,115 @@
+{
+  "": {
+    "dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/tunaneko.d",
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/tunaneko.o",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/primary.swiftdeps"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/AppState.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/AppState.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/AppState~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/AppState.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/AppState.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/L10n.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/L10n.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/L10n~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/L10n.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/L10n.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Models/ProfileStore.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ProfileStore.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ProfileStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ProfileStore.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ProfileStore.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Models/ServerProfile.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ServerProfile.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ServerProfile~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ServerProfile.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ServerProfile.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Services/CertPinStore.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/CertPinStore.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/CertPinStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/CertPinStore.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/CertPinStore.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Services/CredentialStore.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/CredentialStore.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/CredentialStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/CredentialStore.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/CredentialStore.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Services/KillSwitchService.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/KillSwitchService.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/KillSwitchService~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/KillSwitchService.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/KillSwitchService.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Services/LatencyTester.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/LatencyTester.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/LatencyTester~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/LatencyTester.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/LatencyTester.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Services/NetworkServiceDetector.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/NetworkServiceDetector.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/NetworkServiceDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/NetworkServiceDetector.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/NetworkServiceDetector.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Services/StatsMonitor.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/StatsMonitor.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/StatsMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/StatsMonitor.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/StatsMonitor.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Services/VPNProcess.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/VPNProcess.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/VPNProcess~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/VPNProcess.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/VPNProcess.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/TunanekoApp.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/TunanekoApp.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/TunanekoApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/TunanekoApp.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/TunanekoApp.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Views/HomeView.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/HomeView.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/HomeView~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/HomeView.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/HomeView.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Views/LicensesView.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/LicensesView.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/LicensesView~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/LicensesView.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/LicensesView.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Views/ProfileEditView.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ProfileEditView.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ProfileEditView~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ProfileEditView.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ProfileEditView.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Views/ServerListView.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ServerListView.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ServerListView~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ServerListView.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/ServerListView.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Views/SettingsView.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/SettingsView.dia"
+  },
+  "/Users/noahqxs/codes/tunaneko/Sources/tunaneko/Views/TrayMenuView.swift": {
+    "object": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/TrayMenuView.swift.o",
+    "swiftmodule": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/TrayMenuView~partial.swiftmodule",
+    "swift-dependencies": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/TrayMenuView.swiftdeps",
+    "diagnostics": "/Users/noahqxs/codes/tunaneko/.build/arm64-apple-macosx/release/tunaneko.build/TrayMenuView.dia"
+  }
+}

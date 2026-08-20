@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tunaneko</string>
+
+    <string name="tab_home">首页</string>
+    <string name="tab_servers">服务器</string>
+    <string name="tab_settings">设置</string>
+
+    <string name="status_disconnected">未连接</string>
+    <string name="status_connecting">连接中</string>
+    <string name="status_connected">已连接</string>
+    <string name="status_failed">失败</string>
+    <string name="status_measuring">正在测速…</string>
+
+    <string name="connect">连接</string>
+    <string name="disconnect">断开</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="close">关闭</string>
+
+    <string name="uptime">运行时间</string>
+    <string name="total_traffic">总流量</string>
+    <string name="speed">速度</string>
+    <string name="current_profile">当前配置</string>
+    <string name="select_server">选择服务器</string>
+    <string name="auto">自动选择</string>
+    <string name="auto_desc">连接最快的服务器</string>
+
+    <string name="search">搜索</string>
+    <string name="sort_latency">按延迟排序</string>
+    <string name="measure_all">测量全部</string>
+    <string name="add_server">添加服务器</string>
+    <string name="import_servers">导入…</string>
+    <string name="export_servers">导出…</string>
+    <string name="delete_server">删除</string>
+    <string name="delete_confirm_title">删除服务器?</string>
+    <string name="delete_confirm_body">将删除 %1$s (%2$s),其保存的凭据也会被删除。</string>
+    <string name="edit">编辑</string>
+
+    <string name="profile_name">名称</string>
+    <string name="profile_host">主机 (IP 或主机名)</string>
+    <string name="profile_protocol">协议</string>
+    <string name="profile_iptype">IP 类型</string>
+    <string name="own_credentials">使用此服务器专用凭据</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="using_default">使用设置中的默认凭据。</string>
+
+    <string name="settings_general">通用</string>
+    <string name="language">语言</string>
+    <string name="language_auto">自动 (跟随系统)</string>
+    <string name="auto_retry">失败时自动尝试下一个服务器</string>
+    <string name="default_credentials">默认凭据</string>
+    <string name="saved">已保存</string>
+    <string name="log">日志</string>
+    <string name="licenses">许可证</string>
+    <string name="killswitch_note">在 Android 上,请使用系统的「始终开启 VPN」和「屏蔽未通过 VPN 的连接」实现终止开关。</string>
+    <string name="open_vpn_settings">打开系统 VPN 设置</string>
+
+    <string name="error_no_credentials">未保存凭据 — 请在设置中输入</string>
+    <string name="error_auth">认证失败</string>
+    <string name="error_cert">服务器证书与之前不同</string>
+
+    <string name="onboarding_subtitle">OpenConnect VPN 客户端</string>
+    <string name="onboarding_step1">添加服务器 (服务器页 → + 或导入)</string>
+    <string name="onboarding_step2">在设置中输入凭据</string>
+    <string name="onboarding_step3">在首页点击连接按钮</string>
+    <string name="onboarding_start">开始使用</string>
+    <string name="about">关于</string>
+</resources>

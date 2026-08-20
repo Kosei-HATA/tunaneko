@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tunaneko</string>
+
+    <string name="tab_home">ホーム</string>
+    <string name="tab_servers">サーバー</string>
+    <string name="tab_settings">設定</string>
+
+    <string name="status_disconnected">未接続</string>
+    <string name="status_connecting">接続中</string>
+    <string name="status_connected">接続済み</string>
+    <string name="status_failed">失敗</string>
+    <string name="status_measuring">サーバー測定中…</string>
+
+    <string name="connect">接続</string>
+    <string name="disconnect">切断</string>
+    <string name="save">保存</string>
+    <string name="cancel">キャンセル</string>
+    <string name="close">閉じる</string>
+
+    <string name="uptime">実行時間</string>
+    <string name="total_traffic">総トラフィック</string>
+    <string name="speed">速度</string>
+    <string name="current_profile">現在のプロファイル</string>
+    <string name="select_server">サーバーを選択</string>
+    <string name="auto">自動選択</string>
+    <string name="auto_desc">最速のサーバーに接続します</string>
+
+    <string name="search">検索</string>
+    <string name="sort_latency">遅延順に並べ替え</string>
+    <string name="measure_all">全サーバー測定</string>
+    <string name="add_server">サーバーを追加</string>
+    <string name="import_servers">インポート…</string>
+    <string name="export_servers">エクスポート…</string>
+    <string name="delete_server">削除</string>
+    <string name="delete_confirm_title">サーバーを削除しますか?</string>
+    <string name="delete_confirm_body">%1$s (%2$s) を削除します。保存済みの認証情報も削除されます。</string>
+    <string name="edit">編集</string>
+
+    <string name="profile_name">名前</string>
+    <string name="profile_host">ホスト (IP またはホスト名)</string>
+    <string name="profile_protocol">プロトコル</string>
+    <string name="profile_iptype">IP タイプ</string>
+    <string name="own_credentials">このサーバー専用の認証情報を使う</string>
+    <string name="username">ユーザー名</string>
+    <string name="password">パスワード</string>
+    <string name="using_default">設定画面のデフォルト認証情報を使用します。</string>
+
+    <string name="settings_general">一般</string>
+    <string name="language">言語</string>
+    <string name="language_auto">自動 (システム)</string>
+    <string name="auto_retry">失敗時に次のサーバーへ自動リトライ</string>
+    <string name="default_credentials">デフォルト認証情報</string>
+    <string name="saved">保存しました</string>
+    <string name="log">ログ</string>
+    <string name="licenses">ライセンス</string>
+    <string name="killswitch_note">Android ではシステムの「常時接続 VPN」と「VPN なしの接続をブロック」がキルスイッチ相当の機能です。</string>
+    <string name="open_vpn_settings">システムの VPN 設定を開く</string>
+
+    <string name="error_no_credentials">認証情報が未設定です — 設定画面で入力してください</string>
+    <string name="error_auth">認証に失敗しました</string>
+    <string name="error_cert">サーバー証明書が以前と異なります</string>
+
+    <string name="onboarding_subtitle">OpenConnect VPN クライアント</string>
+    <string name="onboarding_step1">サーバーを追加 (サーバータブ → + またはインポート)</string>
+    <string name="onboarding_step2">設定タブで認証情報を入力</string>
+    <string name="onboarding_step3">ホームの接続ボタンを押す</string>
+    <string name="onboarding_start">はじめる</string>
+    <string name="about">このアプリについて</string>
+</resources>

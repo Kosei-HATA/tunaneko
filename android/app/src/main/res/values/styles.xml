@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Tunaneko" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- pre-Android 12 fallback -->
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <!-- Android 12+ system splash: navy bg, no white icon circle -->
+        <item name="android:windowSplashScreenBackground">@color/navy</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/navy</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/fish</item>
+    </style>
+</resources>

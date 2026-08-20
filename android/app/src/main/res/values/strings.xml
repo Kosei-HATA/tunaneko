@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tunaneko</string>
+
+    <string name="tab_home">Home</string>
+    <string name="tab_servers">Servers</string>
+    <string name="tab_settings">Settings</string>
+
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_connecting">Connecting</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_failed">Failed</string>
+    <string name="status_measuring">Measuring servers…</string>
+
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+
+    <string name="uptime">Uptime</string>
+    <string name="total_traffic">Total traffic</string>
+    <string name="speed">Speed</string>
+    <string name="current_profile">Current profile</string>
+    <string name="select_server">Select server</string>
+    <string name="auto">Auto (fastest)</string>
+    <string name="auto_desc">connects to the fastest server</string>
+
+    <string name="search">Search</string>
+    <string name="sort_latency">Sort by latency</string>
+    <string name="measure_all">Measure all</string>
+    <string name="add_server">Add server</string>
+    <string name="import_servers">Import…</string>
+    <string name="export_servers">Export…</string>
+    <string name="delete_server">Delete</string>
+    <string name="delete_confirm_title">Delete server?</string>
+    <string name="delete_confirm_body">Delete %1$s (%2$s)? Its stored credentials will also be removed.</string>
+    <string name="edit">Edit</string>
+
+    <string name="profile_name">Name</string>
+    <string name="profile_host">Host (IP or hostname)</string>
+    <string name="profile_protocol">Protocol</string>
+    <string name="profile_iptype">IP type</string>
+    <string name="own_credentials">Use server-specific credentials</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="using_default">Using the default credentials from Settings.</string>
+
+    <string name="settings_general">General</string>
+    <string name="language">Language</string>
+    <string name="language_auto">Auto (system)</string>
+    <string name="auto_retry">Auto-retry next server on failure</string>
+    <string name="default_credentials">Default credentials</string>
+    <string name="saved">Saved</string>
+    <string name="log">Log</string>
+    <string name="licenses">Licenses</string>
+    <string name="killswitch_note">On Android, use the system \"Always-on VPN\" and \"Block connections without VPN\" options for kill-switch behavior.</string>
+    <string name="open_vpn_settings">Open system VPN settings</string>
+
+    <string name="error_no_credentials">No credentials stored — set them in Settings</string>
+    <string name="error_auth">Authentication failed</string>
+    <string name="error_cert">Server certificate changed</string>
+
+    <string name="onboarding_subtitle">OpenConnect VPN client</string>
+    <string name="onboarding_step1">Add a server ( Servers tab → + or import )</string>
+    <string name="onboarding_step2">Set your credentials in Settings</string>
+    <string name="onboarding_step3">Press Connect on Home</string>
+    <string name="onboarding_start">Get started</string>
+    <string name="about">About</string>
+</resources>
