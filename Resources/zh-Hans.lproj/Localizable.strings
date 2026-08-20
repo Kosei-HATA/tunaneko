@@ -1,0 +1,85 @@
+/* 中文 (简体) */
+"tab.home" = "首页";
+"tab.servers" = "服务器";
+"tab.settings" = "设置";
+
+"status.disconnected" = "未连接";
+"status.connecting" = "连接中:";
+"status.connected" = "已连接:";
+"status.failed" = "失败:";
+"status.blocked" = "已被终止开关阻断";
+
+"action.connect" = "连接";
+"action.disconnect" = "断开";
+"action.save" = "保存";
+"action.cancel" = "取消";
+"action.release_killswitch" = "解除终止开关";
+
+"home.server" = "服务器";
+"home.auto" = "自动选择";
+"home.duration" = "连接时长";
+"home.up" = "上行";
+"home.down" = "下行";
+"home.uptime" = "运行时间";
+"home.connection" = "连接";
+"home.total_traffic" = "总流量";
+"home.speed" = "速度";
+"home.current_profile" = "当前配置";
+"home.select_server" = "选择服务器";
+"home.default_credentials" = "默认凭据";
+"home.privileges" = "权限 (sudoers)";
+"home.measuring" = "正在测速…";
+
+"servers.search" = "搜索";
+"servers.sort_latency" = "按延迟排序";
+"servers.measure_all" = "测量全部";
+"servers.measuring" = "测量中…";
+"servers.auto_desc" = "连接最快的服务器";
+"servers.add" = "添加服务器";
+"servers.import" = "导入…";
+"servers.export" = "导出…";
+"servers.import_export" = "导入 / 导出";
+"servers.delete" = "删除";
+"servers.delete_confirm_title" = "删除服务器?";
+"servers.delete_confirm_body" = "将删除 %1$@ (%2$@),其保存的凭据也会被删除。";
+
+"profile.own_credentials" = "使用此服务器专用凭据";
+"profile.username" = "用户名";
+"profile.password" = "密码";
+"profile.using_default" = "使用设置中的默认凭据。";
+"profile.name" = "名称";
+"profile.host" = "主机 (IP 或主机名)";
+"profile.protocol" = "协议";
+"profile.iptype" = "IP 类型";
+
+"settings.general" = "通用";
+"settings.language" = "语言";
+"settings.language_auto" = "自动 (跟随系统)";
+"settings.auto_retry" = "失败时自动尝试下一个服务器";
+"settings.kill_switch" = "终止开关 (VPN 断开时阻断所有流量)";
+"settings.default_credentials" = "默认凭据";
+"settings.saved" = "已保存";
+"settings.privileges" = "权限";
+"settings.sudoers_ok" = "sudoers 已配置";
+"settings.sudoers_missing" = "sudoers 未配置";
+"settings.sudoers_setup" = "设置…";
+"settings.sudoers_desc" = "OpenConnect 创建隧道需要 root 权限。此设置仅执行一次,为捆绑的 core 和 pfctl 添加 NOPASSWD sudoers 规则。";
+"settings.log" = "日志";
+
+"killswitch.active" = "终止开关正在阻断流量";
+"killswitch.blocked_desc" = "由于 VPN 断开,所有流量已被阻断。解除后即可恢复正常网络。";
+
+"error.no_credentials" = "未保存凭据";
+"error.auth" = "认证失败";
+"error.no_sudoers" = "sudoers 未配置 (请参阅设置)";
+
+"tray.open" = "打开窗口";
+"tray.quit" = "退出";
+
+"setup.required_title" = "需要设置";
+"setup.required_message" = "连接前需要进行一次权限设置 (sudoers 规则)。请打开设置并运行「设置…」。";
+"setup.required_go_settings" = "打开设置";
+"licenses.title" = "许可证";
+"licenses.close" = "关闭";
+"error.cert_mismatch" = "%1$@ 的证书与之前不同。如属正常变更,请删除已保存的 pin 后重新连接。";
+"error.no_credentials_for" = "未保存 %1$@ 的凭据";

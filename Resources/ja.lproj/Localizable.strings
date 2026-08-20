@@ -1,0 +1,86 @@
+/* 日本語 */
+"tab.home" = "ホーム";
+"tab.servers" = "サーバー";
+"tab.settings" = "設定";
+
+"status.disconnected" = "未接続";
+"status.connecting" = "接続中:";
+"status.connected" = "接続済み:";
+"status.failed" = "失敗:";
+"status.blocked" = "キルスイッチにより遮断中";
+
+"action.connect" = "接続";
+"action.disconnect" = "切断";
+"action.save" = "保存";
+"action.cancel" = "キャンセル";
+"action.release_killswitch" = "キルスイッチを解除";
+
+"home.server" = "サーバー";
+"home.auto" = "自動選択";
+"home.duration" = "接続時間";
+"home.up" = "上り";
+"home.down" = "下り";
+"home.uptime" = "実行時間";
+"home.connection" = "接続";
+"home.total_traffic" = "総トラフィック";
+"home.speed" = "速度";
+"home.current_profile" = "現在のプロファイル";
+"home.select_server" = "サーバーを選択";
+"home.default_credentials" = "デフォルト認証情報";
+"home.privileges" = "権限 (sudoers)";
+
+"servers.search" = "検索";
+"servers.sort_latency" = "遅延順に並べ替え";
+"servers.measure_all" = "全サーバー測定";
+"servers.measuring" = "測定中…";
+"servers.auto_desc" = "最速のサーバーに接続します";
+
+"profile.own_credentials" = "このサーバー専用の認証情報を使う";
+"profile.username" = "ユーザー名";
+"profile.password" = "パスワード";
+"profile.using_default" = "設定画面のデフォルト認証情報を使用します。";
+
+"settings.general" = "一般";
+"settings.auto_retry" = "失敗時に次のサーバーへ自動リトライ";
+"settings.kill_switch" = "キルスイッチ (VPN 切断時に全通信を遮断)";
+"settings.language_note" = "表示言語はシステム言語に従います (日本語 / English)。";
+"settings.default_credentials" = "デフォルト認証情報";
+"settings.saved" = "保存しました";
+"settings.privileges" = "権限";
+"settings.sudoers_ok" = "sudoers 設定済み";
+"settings.sudoers_missing" = "sudoers 未設定";
+"settings.sudoers_setup" = "セットアップ…";
+"settings.sudoers_desc" = "OpenConnect はトンネル作成に root 権限が必要です。1回だけ sudoers に NOPASSWD ルール (同梱コアと pfctl 用) を追加します。";
+"settings.log" = "ログ";
+
+"killswitch.active" = "キルスイッチが通信を遮断中";
+
+"error.no_credentials" = "認証情報が未設定です";
+"error.auth" = "認証に失敗しました";
+"error.no_sudoers" = "sudoers が未設定です (設定タブを参照)";
+
+"tray.open" = "ウィンドウを開く";
+"tray.quit" = "終了";
+
+"servers.add" = "サーバーを追加";
+"servers.import" = "インポート…";
+"servers.export" = "エクスポート…";
+"servers.import_export" = "インポート / エクスポート";
+"profile.name" = "名前";
+"profile.host" = "ホスト (IP またはホスト名)";
+"profile.protocol" = "プロトコル";
+"profile.iptype" = "IP タイプ";
+"killswitch.blocked_desc" = "VPN が切断されたため全通信を遮断しています。解除すると通常のネットワークに戻ります。";
+"servers.delete" = "削除";
+"servers.delete_confirm_title" = "サーバーを削除しますか?";
+"servers.delete_confirm_body" = "%1$@ (%2$@) を削除します。保存済みの認証情報も削除されます。";
+"home.measuring" = "サーバー測定中…";
+"setup.required_title" = "セットアップが必要です";
+"setup.required_message" = "接続には初回の権限セットアップ (sudoers ルール) が必要です。設定タブの「セットアップ…」を実行してください。";
+"setup.required_go_settings" = "設定を開く";
+"settings.language" = "言語";
+"settings.language_auto" = "自動 (システム)";
+"licenses.title" = "ライセンス";
+"licenses.close" = "閉じる";
+"error.cert_mismatch" = "%1$@ の証明書が以前と異なります。正当な変更なら保存済み pin を削除して再接続してください。";
+"error.no_credentials_for" = "%1$@ の認証情報が未設定です";
