@@ -150,7 +150,7 @@ class TunanekoVpnService : VpnService(), NativeCore.Callbacks {
         return Notification.Builder(this, CHANNEL_ID)
             .setContentTitle("tunaneko")
             .setContentText(if (profileName.isEmpty()) text else "$text — $profileName")
-            .setSmallIcon(android.R.drawable.ic_lock_lock)
+            .setSmallIcon(R.drawable.ic_tile_fish)
             .setContentIntent(pi)
             .addAction(Notification.Action.Builder(null, getString(R.string.disconnect), stopPi).build())
             .build()
