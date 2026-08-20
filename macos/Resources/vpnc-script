@@ -651,7 +651,7 @@ search $DOMAINS"
 					if [ $CISCO_SPLIT_INC -lt 1 ]; then
 						# Must override for correct default route
 						# Cannot use multiple DNS matching in this case
-						OVERRIDE_PRIMARY='d.add OverridePrimary # 1'
+						OVERRIDE_PRIMARY='d.add OverridePrimary 1'
 					fi
 					# Overriding the default gateway breaks split routing
 					OVERRIDE_GATEWAY=""
@@ -679,12 +679,13 @@ search $DOMAINS"
 				# directly will probably not work as intended.
 				#if [ -z "$CISCO_DEF_DOMAIN" ]; then
 					# Cannot use multiple DNS matching without a domain
-					OVERRIDE_PRIMARY='d.add OverridePrimary # 1'
+					OVERRIDE_PRIMARY='d.add OverridePrimary 1'
 				#fi
 				scutil >/dev/null 2>&1 <<-EOF
 					open
 					d.init
 					d.add ServerAddresses * $INTERNAL_IP4_DNS
+					d.add SupplementalMatchDomains * ""
 					set State:/Network/Service/$TUNDEV/DNS
 					d.init
 					$OVERRIDE_GATEWAY
@@ -713,7 +714,11 @@ search $DOMAINS"
 					ACTIVE_INTERFACE=`route -n get default | grep interface | awk '{print $2}'`
 					ACTIVE_NETWORK_SERVICE=`networksetup -listnetworkserviceorder | grep -B 1 "$ACTIVE_INTERFACE" | head -n 1 | awk '/\([0-9]+\)/{ print }'|cut -d " " -f2-`
 				fi
-				networksetup -setdnsservers "$ACTIVE_NETWORK_SERVICE" $INTERNAL_IP4_DNS
+				if [ -n "$ACTIVE_NETWORK_SERVICE" ]; then
+					networksetup -setdnsservers "$ACTIVE_NETWORK_SERVICE" $INTERNAL_IP4_DNS
+				else
+					echo "WARNING: network service not detected; skipping networksetup DNS" >&2
+				fi
 				;;
 		esac
 	fi
@@ -762,7 +767,11 @@ restore_resolvconf_generic() {
 					ACTIVE_INTERFACE=`route -n get default | grep interface | awk '{print $2}'`
 					ACTIVE_NETWORK_SERVICE=`networksetup -listnetworkserviceorder | grep -B 1 "$ACTIVE_INTERFACE" | head -n 1 | awk '/\([0-9]+\)/{ print }'|cut -d " " -f2-`
 				fi
-				networksetup -setdnsservers "$ACTIVE_NETWORK_SERVICE" Empty
+				if [ -n "$ACTIVE_NETWORK_SERVICE" ]; then
+					networksetup -setdnsservers "$ACTIVE_NETWORK_SERVICE" Empty
+				else
+					echo "WARNING: network service not detected; skipping networksetup DNS restore" >&2
+				fi
 				;;
 		esac
 	fi

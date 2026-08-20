@@ -231,6 +231,27 @@ object VpnManager {
             .setAction(TunanekoVpnService.ACTION_DISCONNECT))
     }
 
+    /** Underlying network changed (SIM ⇔ Wi-Fi): reconnect the SAME profile. */
+    fun handleNetworkChange(context: Context) {
+        val s = _status.value
+        val profile = when (s) {
+            is Status.Connected -> s.profile
+            is Status.Connecting -> s.profile
+            else -> null
+        } ?: return
+        log("network changed — reconnecting ${profile.name}")
+        userCancelled = true          // suppress failure-retry for this teardown
+        retryQueue.clear()
+        retryCount = 0
+        context.startService(Intent(context, TunanekoVpnService::class.java)
+            .setAction(TunanekoVpnService.ACTION_DISCONNECT))
+        scope.launch {
+            delay(1500)               // let the tunnel come down
+            userCancelled = false
+            startService(context, profile)
+        }
+    }
+
     // ---- events from the service ----
 
     fun onConnected() {

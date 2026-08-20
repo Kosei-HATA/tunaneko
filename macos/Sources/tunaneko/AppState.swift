@@ -58,6 +58,7 @@ final class AppState: ObservableObject {
 
     let stats = StatsMonitor()
     private let vpn = VPNProcess()
+    private let networkWatcher = NetworkWatcher()
     private let latencyTester = LatencyTester()
     private var retryQueue: [ServerProfile] = []
     private var retryCount = 0
@@ -77,6 +78,8 @@ final class AppState: ObservableObject {
         stats.onUpdate = { [weak self] in self?.objectWillChange.send() }
         refreshKillSwitchStatus()
         recheckPrivileges()
+        networkWatcher.onPhysicalChange = { [weak self] in self?.handleNetworkChange() }
+        networkWatcher.start()
     }
 
     func recheckPrivileges() {
@@ -205,7 +208,24 @@ final class AppState: ObservableObject {
         pendingReconnect?.cancel()
         pendingReconnect = nil
         vpn.terminate()
+        networkWatcher.rebaseline()   // teardown also changes the interface list
         // do_disconnect hook restores routes and flushes the kill switch anchor
+    }
+
+    /// Physical underlay changed (Wi-Fi ⇔ Ethernet): reconnect the SAME profile.
+    func handleNetworkChange() {
+        guard case .connected = status, let profile = connectingProfile else { return }
+        log("network changed — reconnecting \(profile.name)")
+        intentionalKill = true
+        pendingReconnect?.cancel()
+        pendingReconnect = nil
+        retryQueue = []          // same server, not the next one
+        vpn.terminate()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            guard let self, case .disconnected = self.status else { return }
+            self.intentionalKill = false
+            self.startConnection(to: profile)
+        }
     }
 
     func releaseKillSwitch() {
@@ -271,6 +291,7 @@ final class AppState: ObservableObject {
         case .connected:
             guard case .connecting(let server) = status else { return }
             status = .connected(server: server)
+            networkWatcher.rebaseline()   // tunnel-up changed the interface list
             lastError = nil
             connectStartedAt = Date()
             stats.start()

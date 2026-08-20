@@ -5,6 +5,10 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
+import android.net.NetworkRequest
 import android.net.VpnService
 import android.os.ParcelFileDescriptor
 import com.tunaneko.core.NativeCore
@@ -31,9 +35,77 @@ class TunanekoVpnService : VpnService(), NativeCore.Callbacks {
     @Volatile private var tun: ParcelFileDescriptor? = null
     @Volatile private var currentHost: String = ""
 
+    // underlying network watcher (SIM ⇔ Wi-Fi handover → reconnect)
+    private var networkCallback: ConnectivityManager.NetworkCallback? = null
+    private val physicalNetworks = mutableSetOf<Network>()
+    @Volatile private var activePhysical: Network? = null
+    @Volatile private var lastReconnectAt = 0L
+
     override fun onCreate() {
         super.onCreate()
         VpnManager.init(this)
+        registerNetworkWatcher()
+    }
+
+    /**
+     * Watches ALL physical networks (Wi-Fi/cellular). The default-network
+     * callback stops reporting physical networks once the VPN is the default,
+     * so we track them explicitly and react when the best one changes.
+     */
+    private fun registerNetworkWatcher() {
+        val cm = getSystemService(ConnectivityManager::class.java) ?: return
+        val request = NetworkRequest.Builder()
+            .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+            .build()
+
+        val cb = object : ConnectivityManager.NetworkCallback() {
+            override fun onAvailable(network: Network) {
+                if (isVpn(cm, network)) return
+                synchronized(physicalNetworks) { physicalNetworks.add(network) }
+                evaluate(cm)
+            }
+            override fun onLost(network: Network) {
+                synchronized(physicalNetworks) { physicalNetworks.remove(network) }
+                evaluate(cm)
+            }
+        }
+        cm.registerNetworkCallback(request, cb)
+        networkCallback = cb
+    }
+
+    private fun isVpn(cm: ConnectivityManager, network: Network): Boolean =
+        cm.getNetworkCapabilities(network)?.hasTransport(NetworkCapabilities.TRANSPORT_VPN) == true
+
+    /** system preference: Wi-Fi over cellular */
+    private fun bestPhysical(cm: ConnectivityManager): Network? {
+        synchronized(physicalNetworks) {
+            return physicalNetworks.firstOrNull {
+                cm.getNetworkCapabilities(it)?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) == true
+            } ?: physicalNetworks.firstOrNull()
+        }
+    }
+
+    private fun evaluate(cm: ConnectivityManager) {
+        val best = bestPhysical(cm) ?: return
+        val prev = activePhysical ?: run {
+            activePhysical = best   // first sighting: just record
+            return
+        }
+        if (best != prev) {
+            val now = System.currentTimeMillis()
+            if (now - lastReconnectAt > 3000 &&
+                VpnManager.status.value is Status.Connected) {
+                lastReconnectAt = now
+                activePhysical = best
+                VpnManager.handleNetworkChange(this)
+            }
+        }
+    }
+
+    /** called when the tunnel comes up: remember the underlay we connected on */
+    private fun noteConnectedUnderlay() {
+        val cm = getSystemService(ConnectivityManager::class.java) ?: return
+        activePhysical = bestPhysical(cm)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -74,6 +146,10 @@ class TunanekoVpnService : VpnService(), NativeCore.Callbacks {
     }
 
     override fun onDestroy() {
+        networkCallback?.let {
+            getSystemService(ConnectivityManager::class.java)?.unregisterNetworkCallback(it)
+        }
+        networkCallback = null
         NativeCore.nativeCancel()
         tun = null   // fd is detached & closed natively
         super.onDestroy()
@@ -118,6 +194,7 @@ class TunanekoVpnService : VpnService(), NativeCore.Callbacks {
             // transfer fd ownership to the native side; lib closes it at teardown.
             // (closing a PFD-owned fd natively aborts via fdsan)
             val fd = pfd.detachFd()
+            noteConnectedUnderlay()
             VpnManager.onConnected()
             updateNotification("connected: $addr")
             fd
